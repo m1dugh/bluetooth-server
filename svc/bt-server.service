@@ -1,0 +1,10 @@
+[Unit]
+Description=A simple service for bluetooth server
+After=bluetooth.service
+
+[Service]
+ExecStart=bt-server-init /data/file.txt
+Restart=always
+
+[Install]
+Wanted-By=multi-user.target

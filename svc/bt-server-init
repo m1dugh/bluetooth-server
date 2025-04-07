@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+cat <<-EOF | bluetoothctl
+pairable on
+discoverable on
+discoverable-timeout 0
+agent NoInputNoOutput
+default-agent
+EOF
+
+python /opt/bt-server/server.py "$@"
