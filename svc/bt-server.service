@@ -7,4 +7,4 @@ ExecStart=bt-server-init /data/file.txt
 Restart=always
 
 [Install]
-Wanted-By=multi-user.target
+WantedBy=multi-user.target
